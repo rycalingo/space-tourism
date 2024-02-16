@@ -33,7 +33,7 @@ const links = [
 
 const Stage = ({ children, bkg_image, ...rest }: Props) => {
 	const navLink_list = links.map((link, i) => {
-		const url = `/${link?.label === "home" ? "" : link?.label}`;
+		const url = `./${link?.label === "home" ? "" : link?.label}`;
 		const state = url === location.pathname ? "active" : "base";
 
 		return (
