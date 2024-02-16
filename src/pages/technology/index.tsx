@@ -36,15 +36,12 @@ export default function Technology() {
 		);
 		tab_lables.push(label);
 
-		const landscape = images?.landscape.replace(/^\./, "./src");
-		const portrait = images?.portrait.replace(/^\./, "./src");
-
 		tab_image_sections.push(
 			<TabItem key={name + i} index={i}>
 				<Box w={["100vw", "100vw", "100vw", "auto"]} overflow={"hidden"}>
-					<Image src={portrait} alt={name} display={["none", "none", "none", "block"]} h="100%" mx="auto" mt="2px" objectFit={"cover"} />
+					<Image src={images?.portrait} alt={name} display={["none", "none", "none", "block"]} h="100%" mx="auto" mt="2px" objectFit={"cover"} />
 
-					<Image src={landscape} alt={name} display={["block", "block", "block", "none"]} w="100.5%" maxW="200%" mx="auto" mt="2px" />
+					<Image src={images?.landscape} alt={name} display={["block", "block", "block", "none"]} w="100.5%" maxW="200%" mx="auto" mt="2px" />
 				</Box>
 			</TabItem>
 		);

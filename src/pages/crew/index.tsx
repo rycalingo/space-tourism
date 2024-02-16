@@ -33,12 +33,10 @@ export default function Crew() {
 		);
 		tab_lables.push(label);
 
-		const src = images?.png.replace(/^\./, "./src");
-
 		tab_image_sections.push(
 			<TabItem key={name + i} index={i}>
 				<Box h={["260px", "100%"]} overflow="visible">
-					<Image src={src} alt={name} h="100%" mx="auto" mt="2px" objectFit={"contain"} />
+					<Image src={images?.png} alt={name} h="100%" mx="auto" mt="2px" objectFit={"contain"} />
 				</Box>
 			</TabItem>
 		);

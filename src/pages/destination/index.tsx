@@ -35,12 +35,10 @@ export default function Destination() {
 		);
 		tab_lables.push(label);
 
-		const src = images?.png.replace(/^\./, "./src");
-
 		const img = (
 			<TabItem key={name + i} index={i}>
 				<Box w={["80%", "80%", "80%", "80%"]} m={"auto"}>
-					<Image src={src} alt="object in space" w={["445px"]} />
+					<Image src={images?.png} alt="object in space" w={["445px"]} />
 				</Box>
 			</TabItem>
 		);
