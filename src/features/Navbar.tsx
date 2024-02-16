@@ -14,7 +14,7 @@ export function Navbar({ children, ...rest }: Props) {
 	const toggle = () => setIsOpen(!isOpen);
 
 	const elementRef = useRef<HTMLDivElement>(null);
-	const { width } = useSize(elementRef) ?? { width: null };
+	const { width } = useSize(elementRef) ?? { width: 0 };
 
 	const variant = width >= 768 ? "open" : isOpen ? "base" : "closed";
 

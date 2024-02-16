@@ -8,7 +8,7 @@ const ErrorBoundary = () => {
 	return <PageNotFound />;
 };
 
-const pages = import.meta.glob("@/pages/**/*.tsx", { eager: true });
+const pages = import.meta.glob<any>("@/pages/**/*.tsx", { eager: true });
 
 const routes = [];
 
@@ -17,14 +17,13 @@ for (const path of Object.keys(pages)) {
 	if (!fileName) {
 		continue;
 	}
-
 	const normalizedPathName = fileName.includes("$") ? fileName.replace("$", ":") : fileName.replace(/\/index/, "");
 
 	routes.push({
 		path: fileName === "index" ? "/" : `/${normalizedPathName.toLowerCase()}`,
-		Element: pages[path]?.default,
-		loader: pages[path]?.loader,
-		action: pages[path]?.action,
+		Element: pages[path].default,
+		// loader: pages[path]?.loader,
+		// action: pages[path]?.action,
 		ErrorBoundary: <ErrorBoundary />,
 	});
 }

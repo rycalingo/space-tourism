@@ -1,4 +1,4 @@
-import { Box, Center, Circle, Square, Link, keyframes } from "@chakra-ui/react";
+import { Center, Circle, Square, Link, keyframes } from "@chakra-ui/react";
 import { useBoolean } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 

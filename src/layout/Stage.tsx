@@ -5,7 +5,7 @@ import { Navbar } from "@/features";
 
 interface Props {
 	children: React.ReactNode;
-	bkg_image: string[] | undefined;
+	bkg_image?: string[];
 }
 
 const links = [

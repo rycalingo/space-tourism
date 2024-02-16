@@ -5,7 +5,7 @@ interface Props {
 	children: React.ReactNode;
 	url?: string;
 	num?: string;
-	state?: "active" | "base";
+	state?: string;
 }
 
 export const NavLink = ({ children, url, num, state, ...rest }: Props) => {
