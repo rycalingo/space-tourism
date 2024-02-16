@@ -20,7 +20,7 @@ for (const path of Object.keys(pages)) {
 		continue;
 	}
 	const normalizedPathName = fileName.includes("$") ? fileName.replace("$", ":") : fileName.replace(/\/index/, "");
-	console.log(fileName);
+
 	routes.push({
 		path: fileName === "index" ? base : `${base}${normalizedPathName.toLowerCase()}`,
 		Element: pages[path].default,
@@ -40,6 +40,7 @@ const router = createBrowserRouter(
 	}))
 );
 
+console.log(router);
 export default function AllRoutes() {
 	return <RouterProvider router={router} />;
 }
