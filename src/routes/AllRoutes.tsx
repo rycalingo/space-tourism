@@ -8,6 +8,8 @@ const ErrorBoundary = () => {
 	return <PageNotFound />;
 };
 
+const base = "space-tourism/";
+
 const pages = import.meta.glob<any>("@/pages/**/*.tsx", { eager: true });
 
 const routes = [];
@@ -18,9 +20,9 @@ for (const path of Object.keys(pages)) {
 		continue;
 	}
 	const normalizedPathName = fileName.includes("$") ? fileName.replace("$", ":") : fileName.replace(/\/index/, "");
-
+	console.log(fileName);
 	routes.push({
-		path: fileName === "index" ? "/" : `/${normalizedPathName.toLowerCase()}`,
+		path: fileName === "index" ? base : `${base}${normalizedPathName.toLowerCase()}`,
 		Element: pages[path].default,
 		// loader: pages[path]?.loader,
 		// action: pages[path]?.action,
