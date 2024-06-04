@@ -54,19 +54,44 @@ export default function Technology() {
 	});
 
 	return (
-		<ChakraStage bkg_image={[bg_mobile, bg_tablet, bg_desk]} pl={["auto", "auto", "40px", "104px"]} pr={["auto", "auto", "0", "auto"]}>
-			<Heading as="h5" variant="h5" fontSize={["1rem", "1.25rem", "1.75rem"]} ml={["0"]} textAlign={["center", "left", "left", "left"]}>
-				<Box as="span" textStyle="link_num" opacity="0.25">
+		<ChakraStage bkg_image={[bg_mobile, bg_tablet, bg_desk]} pl={["auto", "auto", "auto", "104px"]} pr={["auto", "auto", "0", "auto"]}>
+			<Heading
+				as='h5'
+				variant='h5'
+				fontSize={["1rem", "1.25rem", "1.75rem"]}
+				ml={["0", "20px"]}
+				textAlign={["center", "left", "left", "left"]}
+			>
+				<Box as='span' textStyle='link_num' opacity='0.25'>
 					03
 				</Box>{" "}
 				SPACE LAUNCH 101
 			</Heading>
 			<ChakraTabContainer w={["100%"]} maxW={["1600px"]} mt={["20px"]} pb={["40px"]}>
-				<Flex direction={["column", "column", "column", "row-reverse"]} justifyContent={["center", "center", "center", "space-between"]} alignItems={["center", null, null, "center"]} gap={["0px", "0px", "0px", "80px"]}>
+				<Flex
+					direction={["column", "column", "column", "row-reverse"]}
+					justifyContent={["center", "center", "center", "space-between"]}
+					alignItems={["center", null, null, "center"]}
+					gap={["0px", "0px", "0px", "80px"]}
+				>
 					<Box w={["auto", null, null, "200%"]}>{tab_image_sections}</Box>
 
-					<Flex w={["auto", "auto", "auto", "auto"]} mx={["20px", null, null, 0]} direction={["column", "column", "column", "row"]} justifyContent={["space-between", null, null, "flex-end"]} gap={["0", "0", "0", "10%"]}>
-						<Flex direction={["row", "row", "row", "column"]} w={["100%", "100%", "100%", "auto"]} mx={["auto", "auto", "auto", "0"]} mt={["30px", null, null, 0]} mb={["40px"]} gap="32px" justifyContent={["center", null, null, "flex-start"]}>
+					<Flex
+						w={["auto", "auto", "auto", "auto"]}
+						mx={["20px", null, null, 0]}
+						direction={["column", "column", "column", "row"]}
+						justifyContent={["space-between", null, null, "flex-end"]}
+						gap={["0", "0", "0", "10%"]}
+					>
+						<Flex
+							direction={["row", "row", "row", "column"]}
+							w={["100%", "100%", "100%", "auto"]}
+							mx={["auto", "auto", "auto", "0"]}
+							mt={["30px", null, null, 0]}
+							mb={["40px"]}
+							gap='32px'
+							justifyContent={["center", null, null, "flex-start"]}
+						>
 							{tab_lables}
 						</Flex>
 						<Box w={["auto", null, null, "auto"]}>{tab_sections}</Box>

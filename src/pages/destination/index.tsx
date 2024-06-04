@@ -38,7 +38,7 @@ export default function Destination() {
 		const img = (
 			<TabItem key={name + i} index={i}>
 				<Box w={["80%", "80%", "80%", "80%"]} m={"auto"}>
-					<Image src={images?.png} alt="object in space" w={["445px"]} />
+					<Image src={images?.png} alt="object in space" w={["445px"]} mx={["auto"]} />
 				</Box>
 			</TabItem>
 		);
